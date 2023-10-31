@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>24d735ab-6d89-42c1-ba44-55fc40915137</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Tire Size">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Tire Size"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Tire Size" typeRef="java.lang.Long"/>
+    </inputData>
+    <decision id="node_1" name="Type of Bike">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="java.lang.Long" collection="false" name="Tire Size"/>
+                <input bomType="java.lang.String" collection="false" name="Geometry"/>
+                <input bomType="java.lang.Double" collection="false" name="Gearing"/>
+                <output bomType="java.lang.String" collection="false" name="Type of Bike"/>
+                <rule defaultRule="false" href="node_1/Determine%20Gravel%20Bike.drl" kind="BusinessRule" name="Determine Gravel Bike"/>
+                <rule defaultRule="false" href="node_1/Determine%20Fat%20Bike.drl" kind="BusinessRule" name="Determine Fat Bike"/>
+                <rule defaultRule="false" href="node_1/Determine%20Road%20Bike.drl" kind="BusinessRule" name="Determine Road Bike"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Type of Bike" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Geometry">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Geometry"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Geometry" typeRef="java.lang.String"/>
+    </inputData>
+    <inputData id="node_3" name="Gearing">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Gearing"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Gearing" typeRef="java.lang.Double"/>
+    </inputData>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

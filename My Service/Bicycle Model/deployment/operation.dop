@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Bicycle Model">
+  <name>Bicycle-Model</name>
+  <uuid>541272c7-cfd9-44d2-a392-41ea0905cd8a</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#24d735ab-6d89-42c1-ba44-55fc40915137"/>
+  <targetRuleProject href="../../Bicycle%20Model#ba8dc23c-027a-4aa3-bf99-4b1ffe8ba059"/>
+  <tags key="operationDescription">
+    <value><![CDATA["Operation for determining the bicycle"]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Bicycle-Model"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>
